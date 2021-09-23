@@ -14,13 +14,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: install dependencies (ubuntu packages)
       run: sudo apt install python3-pytest
-
-  ubuntu-1804_apt-get:
-    runs-on: ubuntu-18.04
-    steps:
-    - uses: actions/checkout@v2
-    - name: install dependencies (ubuntu packages)
-      run: sudo apt-get install python3-pytest
+    - name: install more dependencies (ubuntu packages)
+      run: sudo apt install python3-fusepy python3-pytest python3-pytest-cov python3-pytest-xdist python3-setuptools git-annex python3-sphinx python3-sphinx-argparse python3-recommonmark latexmk texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra
 
   ubuntu-1804_apt_update:
     runs-on: ubuntu-18.04
@@ -30,6 +25,17 @@ jobs:
       run: sudo apt update
     - name: install dependencies (ubuntu packages)
       run: sudo apt install python3-pytest
+    - name: install more dependencies (ubuntu packages)
+      run: sudo apt install python3-fusepy python3-pytest python3-pytest-cov python3-pytest-xdist python3-setuptools git-annex python3-sphinx python3-sphinx-argparse python3-recommonmark latexmk texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra
+
+  ubuntu-1804_apt-get:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: install dependencies (ubuntu packages)
+      run: sudo apt-get install python3-pytest
+    - name: install more dependencies (ubuntu packages)
+      run: sudo apt-get install python3-fusepy python3-pytest python3-pytest-cov python3-pytest-xdist python3-setuptools git-annex python3-sphinx python3-sphinx-argparse python3-recommonmark latexmk texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra
 
   ubuntu-1804_apt-get_update:
     runs-on: ubuntu-18.04
@@ -39,3 +45,5 @@ jobs:
       run: sudo apt-get update
     - name: install dependencies (ubuntu packages)
       run: sudo apt-get install python3-pytest
+    - name: install more dependencies (ubuntu packages)
+      run: sudo apt-get install python3-fusepy python3-pytest python3-pytest-cov python3-pytest-xdist python3-setuptools git-annex python3-sphinx python3-sphinx-argparse python3-recommonmark latexmk texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra
