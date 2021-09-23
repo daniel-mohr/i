@@ -33,7 +33,6 @@ jobs:
 
   ubuntu-1804_apt-get_update:
     runs-on: ubuntu-18.04
-    needs: [pep8_check, pre-commit]
     steps:
     - uses: actions/checkout@v2
     - name: apt-get update
